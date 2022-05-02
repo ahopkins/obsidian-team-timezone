@@ -65,3 +65,66 @@
 		</div>
 	{/each}
 </div>
+
+<style>
+	.team-timezone-wrapper h3 {
+		margin-bottom: 0;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	.team-timezone-wrapper h3 strong {
+		font-size: 1.1em;
+	}
+
+	.team-timezone-people {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.team-timezone-person {
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.team-timezone-person img {
+		width: 75px;
+		height: 75px;
+		border-radius: 100%;
+	}
+
+	.team-timezone-name {
+		font-weight: 700;
+	}
+
+	.team-timezone-name em {
+		font-weight: 400;
+	}
+
+	.team-timezone-tz {
+		font-weight: 200;
+	}
+
+	.dataview td {
+		font-size: 0.9rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.dataview a.internal-link {
+		font-size: 0.85rem;
+	}
+
+	.team-timezone-wrapper input {
+		background-color: var(--bg3-dark);
+		border: 1px solid var(--bg3-dark);
+		padding: 0.5rem;
+		width: 100px;
+		color: var(--faded-blue);
+		font-size: 1.25rem;
+		text-align: center;
+	}
+</style>
