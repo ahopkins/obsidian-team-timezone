@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-team-timezone",
+	"name": "Team Timezone",
 	"version": "1.0.1",
 	"minAppVersion": "0.12.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
+	"description": "A display for displaying cross-timezone teams.",
+	"author": "Adam Hopkins",
 	"authorUrl": "https://obsidian.md",
 	"isDesktopOnly": false
 }
