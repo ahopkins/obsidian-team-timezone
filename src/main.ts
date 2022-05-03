@@ -28,6 +28,10 @@ export default class MyPlugin extends Plugin {
 			leaf,
 			() => this.settings
 		));
+
+		this.addRibbonIcon('clock3', 'Team Timezone', () => {
+			this.toggleTeamTimezoneView();
+		});
 	}
 
 	onunload() {
@@ -41,6 +45,23 @@ export default class MyPlugin extends Plugin {
 	async saveSettings() {
 		await this.saveData(this.settings);
 	}
+
+	private readonly toggleTeamTimezoneView = async (): Promise<void> => {
+		const existing = this.app.workspace.getLeavesOfType(TZ_VIEW);
+		if (existing.length) {
+			this.app.workspace.revealLeaf(existing[0]);
+			return;
+		}
+
+		await this.app.workspace.getRightLeaf(false).setViewState({
+			type: TZ_VIEW,
+			active: true,
+		});
+
+		this.app.workspace.revealLeaf(
+			this.app.workspace.getLeavesOfType(TZ_VIEW)[0],
+		);
+	};
 }
 
 
